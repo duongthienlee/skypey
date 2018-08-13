@@ -4,10 +4,10 @@ import "./index.css";
 import App from "./containers/App";
 import registerServiceWorker from "./registerServiceWorker";
 import store from "./store";
-
+import { HashRouter, Route } from "react-router-dom"
 const render = () => {
     fancyLog();
-    return ReactDOM.render(<App />, document.getElementById("root"));
+    return ReactDOM.render(<HashRouter><Route exact path="/" component={App} /></HashRouter>, document.getElementById("root"));
 };
 
 render();
